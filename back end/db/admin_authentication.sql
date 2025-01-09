@@ -1,1 +1,0 @@
-SELECT * FROM rusiru.adminlog;
