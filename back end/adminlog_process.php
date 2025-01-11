@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
         $_SESSION['email'] = $email;
         
-       // header("Location: ");
+       header("Location: admin_home.html");
         exit();
     } else {
        
