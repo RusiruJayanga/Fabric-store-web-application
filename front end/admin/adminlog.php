@@ -26,7 +26,7 @@
 
             <div class="signin-form">
               <h2 class="form-title">Admin Login</h2>
-              <form method="POST" action="../back end/adminlog_process.php" class="register-form" id="login-form">
+              <form method="POST" action="../../back end/adminlog_process.php" class="register-form" id="login-form">
                 <div class="form-group">
                   <label for="your_name"
                     ><i class="zmdi zmdi-account material-icons-name"></i
