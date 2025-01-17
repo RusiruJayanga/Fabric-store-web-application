@@ -40,13 +40,11 @@
           <div class="col-md-6 col-lg-5 px-0">
             <form
               method="post"
-              action="#"
+              action="add_item_process.php"
               enctype="multipart/form-data"
               id="advertisementForm"
             >
-              <h1 class="mb-0" style="text-align: center; margin-bottom: 30px">
-                Add Advertisement
-              </h1>
+              <h1 class="mb-0" style="text-align: center; margin-bottom: 30px;">Add Advertisement</h1>
 
               <div>
                 <input type="text" placeholder="Header" name="header" />
@@ -72,5 +70,6 @@
         </div>
       </div>
     </section>
+    <!-- end request section -->
   </body>
 </html>
