@@ -32,7 +32,7 @@
     <link href="../css/style3.css" rel="stylesheet" />
   </head>
   <body>
-    <a href="admin_home.html">
+    <a href="admin_home.php">
       <button class="butt">
         <i class="fa-sharp fa-solid fa-circle-left"></i> HOME
       </button>
@@ -51,32 +51,30 @@
       </thead>
 
       <!-- repeat section -->
-      <tbody>
-        <tr>
-          <th scope="row">Lorem ipsum dolor, sit amet</th>
-          <td>Rs.400.00</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>
-            <img
-              src="../../img/delivery.png"
-              style="width: 50px; height: 50px"
-            />
-          </td>
-          <td>
-            <form action="#" method="post">
-              <input type="hidden" name="item_id" value="" />
-              <button
-                style="width: 100%; background-color: #f00c0c"
-                type="submit"
-                class="btn btn-primary"
-              >
-                Delete
-              </button>
-            </form>
-          </td>
-        </tr>
-      </tbody>
-      <!-- end of repeat section -->
+      <?php 
+      try {
+          $conn = new PDO("mysql:host=localhost;dbname=sapiru", "root", "");
+          $stmt = $conn->query("SELECT * FROM advertisement");
+          while ($row = $stmt->fetch()) {
+      ?>
+            <tbody>
+                <tr>
+                    <th scope="row"><?php echo $row['header']; ?></th>
+                    <td>Rs.<?php echo $row['price']; ?>.00</td>
+                    <td><?php echo $row['description']; ?></td>
+                    <td><img src="img/<?php echo $row['image']; ?>" style="width:50px; hight:50px;"></td>
+                    <td>
+                        delete
+                    </td>
+                </tr>
+            </tbody>
+            <?php
+        }
+      } catch (PDOException $e) {
+          echo "Error: " . $e->getMessage();
+      }
+      ?>
+<!-- end of repeat section -->
     </table>
   </body>
 </html>
