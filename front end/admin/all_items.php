@@ -64,7 +64,10 @@
                     <td><?php echo $row['description']; ?></td>
                     <td><img src="img/<?php echo $row['image']; ?>" style="width:50px; hight:50px;"></td>
                     <td>
-                        delete
+                    <form action="../../back end/item_delete_process.php" method="post">
+                            <input type="hidden" name="item_id" value="<?php echo $row['iid']; ?>">
+                            <button style="width: 100%; background-color:#f00c0c;" type="submit" class="btn btn-primary">Delete</button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
