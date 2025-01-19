@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"] == "GET" 
 
     if ($stmt->execute()) {
         $_SESSION['message'] = "Advertisement added successfully.";
-        header("Location: add_item.php");
+        header("Location: ../front end/admin/add_item.php");
         exit();
     } else {
         
