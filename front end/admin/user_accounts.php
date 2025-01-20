@@ -33,18 +33,30 @@
         </tr>
       </thead>
 
-      <!-- repeat section -->
-      <tbody>
-        <tr>
-          <th scope="row">Lorem ipsum dolor, sit amet</th>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>
-            <button>delete</button>
-          </td>
-        </tr>
-      </tbody>
-      <!-- end of repeat section -->
+<!-- repeat section -->
+<?php 
+try {
+    $conn = new PDO("mysql:host=localhost;dbname=sapiru", "root", "");
+    $stmt = $conn->query("SELECT * FROM user");
+    while ($row = $stmt->fetch()) {
+?>
+            <tbody>
+                <tr>
+                    <th scope="row"><?php echo $row['name']; ?></th>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['address']; ?></td>
+                    <td>
+                        delete
+                    </td>
+                </tr>
+            </tbody>
+<?php
+    }
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+<!-- end of repeat section -->
     </table>
   </body>
 </html>
