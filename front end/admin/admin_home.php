@@ -44,7 +44,7 @@
             >
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <a href="user_accounts.html" style="text-decoration: none">
+            <a href="user_accounts.php" style="text-decoration: none">
               <div class="box" style="border-radius: 10px">
                 <div class="img-box">
                   <img src="../../img/adminpage.png" alt="" />
