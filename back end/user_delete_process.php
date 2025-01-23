@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($conn->affected_rows > 0) {
             
-            header("Location: user_accounts.php");
+            header("Location: ../front end/admin/user_accounts.php");
             exit();
         } else {
             echo "No rows affected";
