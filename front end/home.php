@@ -105,7 +105,7 @@ try {
 ?>
         <li> 
         <a  class="card4">
-            <img src="img/<?php echo $row['image']; ?>" class="card__image4" alt="" />
+            <img src="uploads/<?php echo $row['image']; ?>" class="card__image4" alt="" />
             <div class="card__overlay4">
               <div class="card__header4">    
                 <div class="card__header-text4">

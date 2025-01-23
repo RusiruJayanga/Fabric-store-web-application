@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $_SESSION['uname'] = $name;
        
-       header("Location: home.html");
+       header("Location: ../front end/admin/home.php");
         exit();
     } else {
        

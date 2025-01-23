@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
         if ($conn->affected_rows > 0) {
             
-            header("Location: allitem.php");
+            header("Location: ../front end/admin/all_item.php");
             exit();
         } else {
             echo "No rows affected";
