@@ -51,42 +51,49 @@
           <th style="font-size: 18px" scope="col">Edit</th>
         </tr>
       </thead>
-      <tr>
-        <th scope="col">
-          <img
-            src="../img/additem.png"
-            style="
-              width: 50px;
-              height: 50px;
-              margin-bottom: auto;
-              margin-top: 15px;
-            "
-          />
-        </th>
-        <th>
-          <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px">
-            Lorem ipsum, dolor sit amet
-          </p>
-        </th>
-        <th>
-          <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px">
-            Lorem ipsum, dolor sit amet
-          </p>
-        </th>
-        <th>
-          <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px">
-            Rs.400
-          </p>
-        </th>
-        <th>
-          <form action="#" method="post">
-            <input type="hidden" name="cart_id" value="" />
-            <button type="submit" class="btn1" style="margin-top: 20px">
-              Delete
+      <?php 
+try {
+    $conn = new PDO("mysql:host=localhost;dbname=sapiru", "root", "");
+    $stmt = $conn->query("SELECT * FROM order1");
+    $total_purchase_price = 0; 
+
+    while ($row = $stmt->fetch()) {
+        $total_price = $row['qun'] * $row['price'];
+        
+        $total_purchase_price += $total_price;
+?>
+
+<tr>
+    <th scope="col">
+        <img src="img/<?php echo $row['image']; ?>" style="width:50px; height:50px; margin-bottom: auto; margin-top: 15px;" />
+    </th>
+    <th>
+        <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px;"><?php echo $row['header']; ?></p>
+    </th>
+    <th>
+        <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px;">m :<?php echo $row['qun']; ?></p>
+    </th>
+    <th>
+        <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px;">Rs. <?php echo number_format($total_price, 2); ?></p>
+    </th>
+    <th>
+        <form action="../back end/cart_item_delete_process.php" method="post">
+            <input type="hidden" name="cart_id" value="<?php echo $row['iid']; ?>" />
+            <button type="submit" class="btn1" style="margin-top: 20px;">
+                Delete
             </button>
-          </form>
-        </th>
-      </tr>
+        </form>
+    </th>
+</tr>
+
+<?php
+    }
+
+    echo '<tr><td><p style="font-size: 19px; margin-top: 28px;">Total : Rs. ' . number_format($total_purchase_price, 2) . '</p></td></tr>';
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
     </table>
     <a href="#">
       <button type="submit" class="btn" style="width: 10%; margin-left: 76%">
