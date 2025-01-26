@@ -280,7 +280,7 @@ try {
         <img src="../img/calls.png" alt="" />
       </div>
 
-      <form method="post" action="#">
+      <form method="post" action="../back end/send_message_process.php">
         <h3>contact us</h3>
         <input type="text" name="name" placeholder="your name" class="box" />
         <input type="email" name="email" placeholder="your email" class="box" />
