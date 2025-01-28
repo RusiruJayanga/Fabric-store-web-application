@@ -30,7 +30,7 @@
       </div>
     </header>
     <section class="contact" id="contact" style="margin-top: 50px">
-      <form method="post" action="#">
+      <form method="post" action="checkout2.php">
         <input
           type="text"
           name="name"

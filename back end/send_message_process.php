@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $_SESSION['email'] = $email;
         
-        header("Location: maintest.php");
+        header("Location: ../front end/home.php");
         exit();
     } else {
         

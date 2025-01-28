@@ -21,7 +21,7 @@
       </div>
     </section>
 
-    <form method="post" action="#" style="text-align: center">
+    <form method="post" action="../back end/refresh.php" style="text-align: center">
       <input type="submit" value="Ok" class="btn" />
     </form>
 
