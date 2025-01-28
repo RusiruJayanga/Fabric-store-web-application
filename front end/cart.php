@@ -95,7 +95,7 @@ try {
 }
 ?>
     </table>
-    <a href="#">
+    <a href="checkout1.php">
       <button type="submit" class="btn" style="width: 10%; margin-left: 76%">
         Check out
       </button></a

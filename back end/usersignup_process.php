@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === TRUE) {
             $_SESSION['email'] = $email;
            
-           header("Location: ../front end/admin/home.php");
+           header("Location: ../front end/home.php");
             exit();
         } else {
           
