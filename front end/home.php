@@ -113,11 +113,48 @@ try {
                   <form action="details.php" method="post">
                   <input type="hidden" name="item_id" value="<?php echo $row['iid']; ?>">
                   <input type="submit" value="Visit" class="btns" /></form>
+    <!-- Product card -->
+
+    <section class="shop" id="shop">
+      <h1 class="heading">Our <span> Products </span></h1>
+      <ul class="cards4">
+        <?php 
+try {
+    $conn = new PDO("mysql:host=localhost;dbname=sapiru", "root", "");
+    $stmt = $conn->query("SELECT * FROM advertisement"); while ($row =
+        $stmt->fetch()) { ?>
+        <li>
+          <a class="card4">
+            <img
+              src="uploads/<?php echo $row['image']; ?>"
+              class="card__image4"
+              alt=""
+            />
+            <div class="card__overlay4">
+              <div class="card__header4">
+                <div class="card__header-text4">
+                  <h3 class="card__title4">
+                    <?php echo $row['header']; ?>
+                    : 1m
+                  </h3>
+                  <h3 class="card__title41">
+                    Rs
+                    <?php echo $row['price']; ?>.00
+                  </h3>
+                  <form action="itemd.php" method="post">
+                    <input
+                      type="hidden"
+                      name="item_id"
+                      value="<?php echo $row['iid']; ?>"
+                    />
+                    <input type="submit" value="Visit" class="btns" />
+                  </form>
                 </div>
               </div>
               <p class="card__description4"></p>
             </div>
         </a>
+          </a>
         </li>
 
         <?php
