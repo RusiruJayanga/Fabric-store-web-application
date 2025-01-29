@@ -19,13 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-   
     $sql = "DELETE FROM advertisement WHERE iid = '$id0'";
     if ($conn->query($sql) === TRUE) {
       
         if ($conn->affected_rows > 0) {
             
-            header("Location: ../front end/admin/all_item.php");
+            header("Location: ../front end/admin/all_items.php");
             exit();
         } else {
             echo "No rows affected";

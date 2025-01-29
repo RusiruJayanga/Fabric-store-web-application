@@ -16,7 +16,7 @@
     <link href="../css/style3.css" rel="stylesheet" />
   </head>
   <body>
-    <a href="admin_home.html">
+    <a href="admin_home.php">
       <button class="butt">
         <i class="fa-sharp fa-solid fa-circle-left"></i> HOME
       </button>

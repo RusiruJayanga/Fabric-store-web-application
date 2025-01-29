@@ -636,7 +636,7 @@ section {
 
 .footer {
   position: relative;
-  background: url("img/footer_background.jpg") no-repeat;
+  background: url("../../img/footer_background.jpg") no-repeat;
   background-position: center;
   background-size: center;
   padding-top: 10rem;
