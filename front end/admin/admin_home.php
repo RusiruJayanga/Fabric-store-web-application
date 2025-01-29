@@ -20,7 +20,7 @@
         </div>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <a href="add_item.html" style="text-decoration: none">
+            <a href="add_item.php" style="text-decoration: none">
               <div class="box" style="border-radius: 10px">
                 <div class="img-box">
                   <img src="../../img/additem.png" alt="" />
@@ -32,7 +32,7 @@
             >
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <a href="all_items.html" style="text-decoration: none">
+            <a href="all_items.php" style="text-decoration: none">
               <div class="box" style="border-radius: 10px">
                 <div class="img-box">
                   <img src="../../img/allitems.png" alt="" />
@@ -56,7 +56,7 @@
             >
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <a href="orders.html" style="text-decoration: none">
+            <a href="orders.php" style="text-decoration: none">
               <div class="box" style="border-radius: 10px">
                 <div class="img-box">
                   <img src="../../img/approve.png" alt="" />
@@ -68,7 +68,7 @@
             >
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
-            <a href="messages.html" style="text-decoration: none">
+            <a href="messages.php" style="text-decoration: none">
               <div class="box" style="border-radius: 10px">
                 <div class="img-box">
                   <img src="../../img/orders.png" alt="" />

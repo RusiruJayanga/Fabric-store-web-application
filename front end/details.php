@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <p class="price">Rs.<?php echo $row['price']; ?>.00</p>
         </div>
         <div class="image">
-        <img class="img-fluid img1" src="uploads/<?php echo $row['image']; ?>" alt="" style="  width: 100%; height: 250px; object-fit: cover;"/>
+        <img class="img-fluid img1" src="../uploads/<?php echo $row['image']; ?>" alt="" style="  width: 100%; height: 250px; object-fit: cover;"/>
         </div>
       </div>
       <div class="half">

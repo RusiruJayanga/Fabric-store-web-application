@@ -18,7 +18,7 @@
       <a href="#" class="logo"> <i class="fas fa-wallet"></i> viztoza </a>
 
       <nav class="navbar">
-        <a href="home.html">home</a>
+        <a href="home.php">home</a>
         <a
           href="https://bot.dialogflow.com/c7a73d05-58f0-4d89-a291-3c8a99bdf809"
           target="_blank"
@@ -65,7 +65,7 @@ try {
 
 <tr>
     <th scope="col">
-        <img src="img/<?php echo $row['image']; ?>" style="width:50px; height:50px; margin-bottom: auto; margin-top: 15px;" />
+        <img src="../uploads/<?php echo $row['image']; ?>" style="width:50px; height:50px; margin-bottom: auto; margin-top: 15px;" />
     </th>
     <th>
         <p style="margin-bottom: auto; margin-top: 28px; font-size: 18px;"><?php echo $row['header']; ?></p>
