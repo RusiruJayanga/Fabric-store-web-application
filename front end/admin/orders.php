@@ -16,7 +16,7 @@
     <link href="../css/style3.css" rel="stylesheet" />
   </head>
   <body>
-    <a href="admin_home.html">
+    <a href="admin_home.php">
       <button class="butt">
         <i class="fa-sharp fa-solid fa-circle-left"></i> HOME
       </button>
@@ -36,16 +36,28 @@
       </thead>
 
       <!-- repeat section -->
-      <tbody>
-        <tr>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-          <td>Lorem ipsum dolor, sit amet</td>
-        </tr>
-      </tbody>
+      <?php 
+      try {
+          $conn = new PDO("mysql:host=localhost;dbname=sapiru", "root", "");
+          $stmt = $conn->query("SELECT * FROM order2");
+          while ($row = $stmt->fetch()) {
+      ?>
+                  <tbody>
+                      <tr>
+                          <td><?php echo $row['client']; ?></td>
+                          <td><?php echo $row['header']; ?></td>
+                          <td><?php echo $row['price']; ?></td>
+                          <td><?php echo $row['qun']; ?></td>
+                          <td><?php echo $row['iid']; ?></td>
+                          <td><?php echo $row['address']; ?></td>
+                      </tr>
+                  </tbody>
+      <?php
+          }
+      } catch (PDOException $e) {
+          echo "Error: " . $e->getMessage();
+      }
+      ?>
       <!-- end of repeat section -->
     </table>
   </body>

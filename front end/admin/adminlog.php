@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Main css -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <div class="main">
@@ -20,7 +20,7 @@
           <div class="signin-content">
             <div class="signin-image">
               <figure>
-                <img src="images/signin-image.jpg" alt="sing up image" />
+                <img src="../../img/signin-image.jpg" alt="sing up image" />
               </figure>
             </div>
 
