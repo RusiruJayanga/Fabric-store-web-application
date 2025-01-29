@@ -62,7 +62,7 @@
                     <th scope="row"><?php echo $row['header']; ?></th>
                     <td>Rs.<?php echo $row['price']; ?>.00</td>
                     <td><?php echo $row['description']; ?></td>
-                    <td><img src="img/<?php echo $row['image']; ?>" style="width:50px; hight:50px;"></td>
+                    <td><img src="../../uploads/<?php echo $row['image']; ?>" style="width:50px; hight:50px;"></td>
                     <td>
                     <form action="../../back end/item_delete_process.php" method="post">
                             <input type="hidden" name="item_id" value="<?php echo $row['iid']; ?>">

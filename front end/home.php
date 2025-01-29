@@ -33,7 +33,7 @@
       </nav>
       <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="cart.php" class="fas fa-shopping-cart"></a>
         <div class="fas" id="login-btn"></div>
       </div>
     </header>
@@ -90,7 +90,6 @@
         </div>
       </div>
     </section>
-
 <!-- Product card -->
 
     <section class="shop" id="shop">
@@ -105,13 +104,13 @@ try {
 ?>
         <li> 
         <a  class="card4">
-            <img src="uploads/<?php echo $row['image']; ?>" class="card__image4" alt="" />
+            <img src="../uploads/<?php echo $row['image']; ?>" class="card__image4" alt="" />
             <div class="card__overlay4">
               <div class="card__header4">    
                 <div class="card__header-text4">
                   <h3 class="card__title4"><?php echo $row['header']; ?> : 1m</h3>   
                   <h3 class="card__title41">Rs <?php echo $row['price']; ?>.00</h3>
-                  <form action="itemd.php" method="post">
+                  <form action="details.php" method="post">
                   <input type="hidden" name="item_id" value="<?php echo $row['iid']; ?>">
                   <input type="submit" value="Visit" class="btns" /></form>
                 </div>
@@ -131,7 +130,6 @@ try {
         </section>
 
 <!-- end -->
-
     <section class="about" id="about">
       <div class="image">
         <img src="../img/main3.jpg" style="border-radius: 10px" alt="" />

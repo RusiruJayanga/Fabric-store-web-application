@@ -43,10 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cart_id'])) {
                     $headers = "From: rusirujayanga@gmail.com";
                     
                     if (mail($user_email, $subject, $message, $headers)) {
-                        header("Location: thankyou.php");
+
+                        header("Location: ../front end/thankyou.php");
                         exit();
                     } else {
-                        header("Location: thankyou.php");
+                        header("Location: ../front end/thankyou.php");
                     }
                 } else {
                     echo "Error inserting data into order2 table: " . $conn->error;
