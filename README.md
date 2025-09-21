@@ -11,7 +11,7 @@
 
 <p align="left">
 This is an e-commerce web application developed for a fabric store using PHP, HTML, CSS, JavaScript, and MySQL. 
-The main objective of this project is to gain hands-on experience in building PHP-based web applications, while implementing essential <b>CRUD operations, user authentication, and shopping functionalities
+The main objective of this project is to gain hands-on experience in building PHP-based web applications, while implementing essential CRUD operations, user authentication, and shopping functionalities
 </p>
 
 <h4 align="left">Key Features </h4>
